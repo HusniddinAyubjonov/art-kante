@@ -1,3 +1,4 @@
+/* design-page.module.css */
 .hero {
   padding: 40px 0 60px;
 }
@@ -12,6 +13,10 @@
   font-size: 14px;
   color: var(--color-text-secondary);
   line-height: 1.7;
+}
+
+.text p {
+  margin-bottom: 16px;
 }
 
 .steps {
@@ -30,6 +35,7 @@
   font-size: 32px;
   font-weight: 800;
   color: #333;
+  line-height: 1;
 }
 
 .stepText {
@@ -43,7 +49,6 @@
 
 .portfolioSection {
   padding: 60px 0;
-  background-color: #0d0d0d;
 }
 
 .portfolioGrid {
@@ -59,4 +64,20 @@
   border: 1px solid var(--color-border);
   object-fit: cover;
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .portfolioGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolioGrid {
+    grid-template-columns: 1fr;
+  }
 }
