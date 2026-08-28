@@ -1,0 +1,62 @@
+.hero {
+  padding: 40px 0 60px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.text {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.stepNum {
+  font-size: 32px;
+  font-weight: 800;
+  color: #333;
+}
+
+.stepText {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.portfolioSection {
+  padding: 60px 0;
+  background-color: #0d0d0d;
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.card {
+  height: 380px;
+  background-color: #1e1e1e;
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+  width: 100%;
+}

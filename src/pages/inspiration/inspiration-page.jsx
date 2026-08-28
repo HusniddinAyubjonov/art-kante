@@ -1,11 +1,14 @@
 import { Navbar } from "@/widgets/navbar";
 import { Footer } from "@/widgets/footer";
+import { Inspiration } from "@/entities/inspiration";
 
-export const CatalogPage = () => {
+export const InspirationPage = () => {
   return (
     <>
       <Navbar />
-      <main></main>
+      <main>
+        <Inspiration />
+      </main>
       <Footer />
     </>
   );
