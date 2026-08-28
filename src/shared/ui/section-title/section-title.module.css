@@ -1,3 +1,4 @@
+/* section-title.module.css */
 .wrapper {
   margin-bottom: 32px;
 }
@@ -15,6 +16,5 @@
   font-size: 36px;
   font-weight: 300;
   color: var(--color-text-primary);
-  margin: 0;
   letter-spacing: 0.02em;
 }

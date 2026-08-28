@@ -1,3 +1,4 @@
+/* philosophy-page.module.css */
 .hero {
   padding: 40px 0;
 }
@@ -17,12 +18,18 @@
   justify-content: center;
   font-size: 32px;
   letter-spacing: 0.2em;
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
 .heroText {
   font-size: 14px;
   color: var(--color-text-secondary);
   line-height: 1.7;
+}
+
+.heroText p {
+  margin-bottom: 16px;
 }
 
 .timelineSection {
@@ -33,7 +40,6 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  position: relative;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -52,9 +58,6 @@
 }
 
 .eventsList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   border-left: 1px dashed var(--color-border);
   padding-left: 20px;
 }
@@ -63,4 +66,14 @@
   font-size: 13px;
   color: var(--color-text-secondary);
   margin-bottom: 8px;
+}
+
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .heroBox {
+    height: 180px;
+  }
 }
