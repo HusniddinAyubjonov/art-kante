@@ -1,0 +1,135 @@
+.section {
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1269px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.title {
+  font-family: 'HelveticaNeueCyr', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0 0 48px;
+}
+
+.collection {
+  margin-bottom: 56px;
+}
+
+.collection:last-child {
+  margin-bottom: 0;
+}
+
+.collectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.collectionTitle {
+  font-family: 'HelveticaNeueCyr', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.shareLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  color: inherit;
+  opacity: 0.7;
+  font-family: 'HelveticaNeueCyr', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.shareLink svg {
+  width: 14px;
+  height: 14px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 278px;
+  aspect-ratio: 278 / 373;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-family: 'HelveticaNeueCyr', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 5px 8px;
+  border-radius: 2px;
+}
+
+.cardIcons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.iconBtn {
+  padding: 0;
+  color: #fff;
+  font-size: 15px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  .collectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
