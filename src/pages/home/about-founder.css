@@ -1,0 +1,129 @@
+.about-founder {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, 440px) 1fr;
+  gap: clamp(40px, 7vw, 130px);
+  align-items: center;
+  margin: 120px 5vw;
+  padding: clamp(35px, 5vw, 80px);
+  overflow: hidden;
+  background: #0d0e0d;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-founder::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 18%;
+  width: 420px;
+  height: 420px;
+  background: rgba(230, 120, 0, 0.22);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+  transition: 0.6s ease;
+}
+
+.about-founder:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.about-founder__photo,
+.about-founder__content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-founder__photo {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #1c1d1c;
+}
+
+.about-founder__photo img {
+  width: 100%;
+  height: 570px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.88);
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.about-founder:hover .about-founder__photo img {
+  transform: scale(1.06);
+  filter: brightness(1);
+}
+
+.about-founder__label {
+  margin-bottom: 28px;
+  color: #e67800;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+}
+
+.about-founder h2 {
+  margin: 0 0 32px;
+  color: #e67800;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.about-founder__content > p {
+  max-width: 720px;
+  margin: 0 0 24px;
+  color: #d0d0d0;
+  font-size: clamp(17px, 1.5vw, 22px);
+  line-height: 1.65;
+}
+
+.about-founder__button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 22px 30px;
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  transition: 0.3s ease;
+}
+
+.about-founder__button:hover {
+  color: #111;
+  background: #e67800;
+  border-color: #e67800;
+  box-shadow: 0 0 30px rgba(230, 120, 0, 0.45);
+}
+
+@media (max-width: 800px) {
+  .about-founder {
+    grid-template-columns: 1fr;
+    margin: 70px 20px;
+    padding: 30px;
+  }
+
+  .about-founder__photo img {
+    height: 450px;
+  }
+}
+.about-founder__typing {
+  white-space: pre-line;
+  min-height: 150px;
+}
+
+.typing-cursor {
+  color: #e67800;
+  animation: cursor-blink 0.7s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}

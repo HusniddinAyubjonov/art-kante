@@ -1,0 +1,158 @@
+.process-section {
+  position: relative;
+  min-height: 1150px;
+  margin: 0;
+  padding: 130px 8vw;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(15, 16, 15, 0.45), rgba(15, 16, 15, 0.72)),
+    url('/hero-slide-1.png') center / cover;
+}
+
+.process-section__title {
+  position: relative;
+  z-index: 1;
+  margin-left: 6%;
+  color: #fff;
+  font-size: clamp(34px, 4vw, 66px);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.process-card {
+  position: absolute;
+  z-index: 2;
+  width: min(620px, 45vw);
+  padding: 42px 48px;
+  text-align: center;
+  background: rgba(15, 15, 15, 0.86);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease;
+}
+
+.process-card:hover {
+  box-shadow: 0 0 45px rgba(230, 120, 0, 0.35);
+}
+
+.process-card__logo {
+  display: block;
+  margin-bottom: 20px;
+  color: #e67800;
+  font-size: 58px;
+  line-height: 0.7;
+}
+
+.process-card h3 {
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: clamp(17px, 1.5vw, 23px);
+  line-height: 1.25;
+}
+
+.process-card p {
+  margin: 0;
+  color: #df800d;
+  font-size: clamp(16px, 1.35vw, 20px);
+  line-height: 1.4;
+}
+
+.process-card--idea {
+  top: 350px;
+  right: 9%;
+  transform: translateX(120px);
+}
+
+.process-card--engineering {
+  top: 550px;
+  left: 10%;
+  transform: translateX(-120px);
+}
+
+.process-card--project {
+  top: 820px;
+  left: 35%;
+  transform: translateY(100px);
+}
+
+ .process-card {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Первый блок появляется сразу */
+.process-section--visible .process-card--idea {
+  transition-delay: 0s;
+}
+
+/* Второй — через 2 секунды */
+.process-section--visible .process-card--engineering {
+  transition-delay: 2s;
+}
+
+/* Третий — ещё через 1.7 секунды */
+.process-section--visible .process-card--project {
+  transition-delay: 3.7s;
+}
+
+@media (max-width: 800px) {
+  .process-section {
+    min-height: auto;
+    padding: 80px 20px;
+  }
+
+  .process-section__title {
+    margin: 0 0 45px;
+  }
+
+  .process-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+    margin: 18px 0;
+    padding: 32px 24px;
+    transform: translateY(50px);
+  }
+
+  .process-section--visible .process-card {
+    transform: translateY(0);
+  }
+}
+/* Тёмный слой над фоном */
+.process-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(10, 11, 10, 0.6);
+  transition: background 1.4s ease;
+}
+
+/* Пока появляются карточки — фон меняет настроение */
+.process-section--visible::before {
+  animation: background-change 5.4s ease forwards;
+}
+
+@keyframes background-change {
+  0% {
+    background: rgba(10, 11, 10, 0.72);
+  }
+
+  37% {
+    background: rgba(75, 32, 6, 0.42);
+  }
+
+  70% {
+    background: rgba(31, 15, 4, 0.54);
+  }
+
+  100% {
+    background: rgba(10, 11, 10, 0.38);
+  }
+}
